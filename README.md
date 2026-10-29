@@ -1,6 +1,6 @@
 # RecruitO
 
-> **Positioning (draft, edit to your own words):** RecruitO helps hiring teams screen CVs, run structured video interviews, and reach evidence-backed hiring decisions faster and more consistently.
+
 
 **Name rationale:** I chose the name RecruitO because it combines “Recruit” with a modern, technology-driven identity, reflecting the goal of making recruitment smarter and more efficient. The platform serves recruiters, interviewers, and hiring managers by helping them screen and rank candidates, conduct AI-powered interviews, and generate evidence-based candidate assessments. Recruito, the name sounds like a pet which does the recruitment for you.
 
