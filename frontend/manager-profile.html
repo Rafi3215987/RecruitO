@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b3a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Edit profile — RecruitO</title>
+  <link rel="stylesheet" href="./styles.css?v=20261026-6">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main class="public-jobs-page manager-applications-page">
+    <header class="public-jobs-header">
+      <a class="public-jobs-brand" href="./index.html" aria-label="RecruitO hiring workspace">
+        <img src="./assets/recruito-logo.png" alt="">
+        <span>RecruitO</span>
+      </a>
+      <div class="manager-page-actions">
+        <a class="public-jobs-team-link" href="./index.html?auth=signin">Back to workspace</a>
+        <button id="manager-logout-button" class="button button-secondary" type="button" hidden>Sign out</button>
+      </div>
+    </header>
+    <p id="manager-logout-message" class="public-jobs-message manager-logout-message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="manager-profile-heading">
+      <p class="eyebrow">HIRING TEAM</p>
+      <h1 id="manager-profile-heading">Edit profile</h1>
+      <p class="public-jobs-intro">Update the name and contact email for your hiring-manager account. Interview-eligibility notifications are sent to this email.</p>
+
+      <p id="manager-gate-message" class="public-jobs-message" role="status" aria-live="polite">Checking your session…</p>
+
+      <section id="manager-profile-panel" class="candidate-access" aria-labelledby="profile-form-heading" hidden>
+        <div>
+          <h2 id="profile-form-heading">Account details</h2>
+        </div>
+        <form id="manager-profile-form" class="candidate-auth-form">
+          <div class="form-field">
+            <label for="profile-name">Full name</label>
+            <input id="profile-name" name="full_name" type="text" maxlength="255" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="profile-email">Contact email</label>
+            <input id="profile-email" name="email" type="email" maxlength="255" autocomplete="email" required>
+          </div>
+          <button class="button button-primary" type="submit">Save profile</button>
+        </form>
+        <p id="manager-profile-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+
+    <footer class="public-jobs-footer">RecruitO · Decision support, with human oversight.</footer>
+  </main>
+  <script type="module" src="./js/manager-profile.js?v=20261026-2"></script>
+</body>
+</html>

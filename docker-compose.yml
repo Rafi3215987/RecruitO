@@ -1,0 +1,67 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    env_file: .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    ports:
+      - "5432:5432"
+
+  api:
+    build: ./backend
+    env_file: .env
+    environment:
+      CANDIDATE_UPLOAD_DIR: /data/candidate-resumes
+      STAFF_PHOTO_DIR: /data/staff-photos
+      FACE_MODELS_DIR: /opt/recruito/models
+      NOTIFICATION_WORKER_ENABLED: "true"
+    ports:
+      - "8000:8000"
+    volumes:
+      - candidate_uploads:/data/candidate-resumes
+      - staff_photos:/data/staff-photos
+      # Git-ignored sample CVs for the batch-import demo (app.scripts.import_cvs).
+      - ./test-data:/data/test-data:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      blogger-mcp:
+        condition: service_started
+
+  blogger-mcp:
+    build: ./backend
+    command: ["python", "-m", "app.mcp_servers.blogger"]
+    env_file: .env
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "5500:80"
+    environment:
+      FRONTEND_LAN_HOST: ${FRONTEND_LAN_HOST:-localhost}
+      NGINX_ENVSUBST_FILTER: ^FRONTEND_LAN_HOST$
+    depends_on:
+      - api
+
+  # Public HTTPS access without exposing your IP or touching the router.
+  # cloudflared opens an outbound tunnel to Cloudflare and serves the whole app
+  # (static site + /api) through one https://<random>.trycloudflare.com link.
+  # The link is printed in: docker compose logs cloudflared
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate --url http://frontend:80
+    depends_on:
+      - frontend
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  candidate_uploads:
+  staff_photos:

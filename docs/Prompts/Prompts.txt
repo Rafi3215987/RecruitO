@@ -1,0 +1,71 @@
+FINAL PROJECT ROADMAP
+
+Hiring Manager Email: manager@example.com
+password: HFm8JqNh5-5ItwM3w2Ife7ne
+
+INITIAL PROMPT
+
+Ok here are the fix for all the limitations.
+
+**create 3 user profiles. 1. Hiring Team, 2. Interviewer, 3. Candidate
+
+**Expand the Interview blackbox as necessary as i dont have any idea on webRTC i kept it as a blackbox
+
+**Transcription Pipeline: For transcription pipeline wont the whole thing run on background while having at most one page for the transcription
+
+**Assessing the Interview: I kept it blackbox as well, expand it as required according to the BID
+
+**Same thing goes for the CV assessment
+
+**CV Parsing: I need to clarify this step to you. So after creating the job description by giving all the required field information to the chatbot, our AI agent will post it 
+              any social and from there candidates will be directed to a form in our website. Candidates will provide their cv in there and agent will parse all the cv from it
+
+**Agent responsibility stage: for this stage our agent can decide between two things. It will either assess all the CVs after the deadline or after a certain period of time
+			it will check for the already received CV. In this case there can be one more option. In certain cases Hiring team can trigger the cv assessment and decide on going with 
+			with the hiring process with already received CV instead of accepting allthe CVs till deadline
+			
+**Limitation 10: Interviews will be scheduled after deciding on the fact that all the CVs or enough CVs are received and assessed and we would like t move on with aleady gotten 
+			candidates, so we would like to schedule interviews for them
+			
+**Limitation 11: Resolve these limitations according to the BID, For interview QA analysis part include the streched features as well
+
+
+**Limitation 12: Include evidence traceability
+
+**Limitation 13: Of course hiring team, interviewer and candidate will have different access rights
+
+**Limitation 14: Instead of RESTapi use FASTAPI to expose all backend tasks
+
+**Chatbot can be used for everyone but cannot will have guardrails for different users. For hiring team and interviewer no need for any guardrails, but for candidates they need to
+			have guardrails. -> candidates can only check for their scheduled interviews through chatbot, they can search for jobs using keyword(INNOVATIVE FEATURE), can check for their 
+			applied job status
+			
+**Limitation 16: Fix this according to the BID
+
+**Limitation 17: FIX this according to the BID
+
+**Limitation 18: add your suggestions to the workflow|
+
+**Limitation 19: add your suggestions to the workflow
+
+Create the langgraph workflow and demonstrate that to me.***
+
+suggest if there are any more fixes to bring otherwise generate the workflow both high level and low level now.
+
+
+fastAPI
+
+**Uvicorn is a lightning-fast ASGI (Asynchronous Server Gateway Interface) web server implementation for Python.
+
+**Interactive API docs
+Now go to http://127.0.0.1:8000/docs.
+
+You will see the automatic interactive API documentation (provided by Swagger UI):
+
+**Alternative API docs¶
+And now, go to http://127.0.0.1:8000/redoc.
+
+You will see the alternative automatic documentation (provided by ReDoc):
+
+
+docker compose -f ..\docker-compose.yml run --build --rm -v "$($PWD.Path):/code" api python -m alembic revision --autogenerate -m "create jobs and job requirements"

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b3a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Interviewer dashboard — RecruitO</title>
+  <link rel="stylesheet" href="./styles.css?v=20261026-6">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main class="public-jobs-page interviewer-page">
+    <header class="public-jobs-header">
+      <a class="public-jobs-brand" href="./index.html"><img src="./assets/recruito-logo.png" alt=""><span>RecruitO</span></a>
+      <div class="manager-page-actions"><a class="public-jobs-team-link" href="./index.html">Workspace</a><button id="interviewer-logout" class="button button-secondary" type="button">Sign out</button></div>
+    </header>
+    <section aria-labelledby="interviewer-heading">
+      <p class="eyebrow">INTERVIEWER</p>
+      <h1 id="interviewer-heading">Your interviews</h1>
+      <p id="interviewer-status" class="public-jobs-intro" role="status" aria-live="polite">Loading your assigned interviews…</p>
+      <section class="candidate-access" aria-labelledby="role-assistant-heading">
+        <h2 id="role-assistant-heading">Interview assistant</h2>
+        <p>Ask about interviews assigned to you, including their transcripts and analysis.</p>
+        <div id="role-assistant-log" aria-live="polite"></div>
+        <form id="role-assistant-form" class="candidate-auth-form">
+          <div class="form-field"><label for="role-assistant-message">Your question</label><input id="role-assistant-message" name="message" maxlength="1000" required></div>
+          <button class="button button-primary" type="submit">Ask</button>
+        </form>
+        <p id="role-assistant-status" role="status" aria-live="polite"></p>
+      </section>
+      <section class="candidate-access" aria-labelledby="interviewer-profile-heading">
+        <div><h2 id="interviewer-profile-heading">Your profile</h2><p>Keep your interviewer profile current for the hiring team.</p><img id="interviewer-photo-preview" class="interviewer-photo" alt="Your profile photo" hidden></div>
+        <form id="interviewer-profile-form" class="candidate-auth-form">
+          <div class="form-field"><label for="interviewer-name">Full name</label><input id="interviewer-name" name="full_name" maxlength="255" required></div>
+          <div class="form-field"><label for="interviewer-email">Email</label><input id="interviewer-email" name="email" type="email" maxlength="255" required></div>
+          <div class="form-field"><label for="interviewer-institute">Institute / organization</label><input id="interviewer-institute" name="institute" maxlength="255"></div>
+          <div class="form-field"><label for="interviewer-experience-years">Experience (years)</label><input id="interviewer-experience-years" name="experience_years" type="number" min="0" max="80"></div>
+          <div class="form-field"><label for="interviewer-experience">Experience summary</label><textarea id="interviewer-experience" name="experience_summary" maxlength="2000"></textarea></div>
+          <div class="form-field"><label for="interviewer-education">Education</label><textarea id="interviewer-education" name="education" maxlength="1000"></textarea></div>
+          <button class="button button-primary" type="submit">Save profile</button>
+          <p id="interviewer-profile-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+        </form>
+        <form id="interviewer-photo-form" class="interviewer-photo-form">
+          <label for="interviewer-photo">Profile photo (JPEG, PNG or WebP, max 5 MB)</label>
+          <input id="interviewer-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" required>
+          <button class="button button-secondary" type="submit">Upload photo</button>
+        </form>
+      </section>
+      <section class="candidate-dashboard interviewer-list" aria-labelledby="interviews-heading">
+        <div class="manager-applications-heading"><h2 id="interviews-heading">Upcoming and in-progress interviews</h2><button id="refresh-interviews" class="button button-secondary" type="button">Refresh interviews</button></div>
+        <div id="interviewer-interviews" class="public-jobs-list"></div>
+      </section>
+      <section class="candidate-dashboard interviewer-list" aria-labelledby="applications-heading">
+        <div class="manager-applications-heading"><h2 id="applications-heading">Job applications</h2><button id="refresh-applications" class="button button-secondary" type="button">Refresh applications</button></div>
+        <p id="interviewer-applications-status" class="public-jobs-intro" role="status" aria-live="polite">Loading job applications…</p>
+        <div id="interviewer-applications" class="public-jobs-list"></div>
+      </section>
+    </section>
+    <footer class="public-jobs-footer">RecruitO · Decision support, with human oversight.</footer>
+  </main>
+  <script type="module" src="./js/interviewer-dashboard.js"></script>
+  <script type="module" src="./js/role-assistant.js"></script>
+</body>
+</html>

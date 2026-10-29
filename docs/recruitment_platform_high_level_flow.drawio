@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" modified="2026-09-30T12:00:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="recruitment-flow" name="High-Level Project Flow">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="title" value="AI-Powered Recruitment &amp; Interview Intelligence Platform" style="text;html=1;strokeColor=none;fillColor=none;fontSize=26;fontStyle=1;fontColor=#17365D;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="1000" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="End-to-End Recruitment Support: Job Posting → Candidate Screening → Human-Led Interview → AI Assessment" style="text;html=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#4F5B66;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="65" width="1000" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Main flow -->
+        <mxCell id="s1" value="1. CREATE JOB REQUIREMENT&#xa;&#xa;Interviewer defines role, skills, experience, qualifications, evaluation criteria and weights." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF4FF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s2" value="2. AI GENERATES / REFINES JOB DESCRIPTION&#xa;&#xa;Creates a clear, structured JD from the interviewer’s requirements." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF9EE;strokeColor=#5CB85C;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3" value="3. POST JOB VIA MCP&#xa;&#xa;Recruitment agent uses MCP servers to connect with approved/free job boards, social channels and posting tools." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EEFF;strokeColor=#7656D6;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="570" y="140" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s4" value="4. CANDIDATES APPLY&#xa;&#xa;Candidates find the job on external channels or through a direct application link and submit their CV/information." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#F0AD4E;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="840" y="140" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s5" value="5. AI CV SCREENING &amp; RANKING&#xa;&#xa;CVs are parsed, matched semantically against requirements, scored and ranked with evidence." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF9EE;strokeColor=#5CB85C;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="140" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s6" value="6. AI AGENT SCHEDULES INTERVIEW&#xa;&#xa;Coordinates interviewer and candidate availability, sends invitations/reminders and manages the interview schedule." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0F5;strokeColor=#D86B9B;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="140" width="230" height="145" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s7" value="7. REAL HUMAN INTERVIEW&#xa;&#xa;Interviewer conducts the video interview with the candidate. AI may assist with interview context/questions, but does NOT conduct the interview." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4E8;strokeColor=#C98A3D;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="165" y="355" width="270" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="s8" value="8. RECORD &amp; TRANSCRIBE&#xa;&#xa;With consent, interview audio/video is captured and speech is converted to timestamped text with interviewer/candidate speaker identification." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#F0AD4E;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="485" y="355" width="270" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="s9" value="9. INTERVIEW Q&amp;A ANALYSIS&#xa;&#xa;AI identifies questions and answers and evaluates relevance, accuracy, completeness and communication quality against job requirements." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EEFF;strokeColor=#7656D6;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="805" y="355" width="270" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="s10" value="10. CONSOLIDATED CANDIDATE ASSESSMENT&#xa;&#xa;Combines CV screening and interview analysis into an evidence-backed assessment with strengths, gaps and risks." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF9EE;strokeColor=#5CB85C;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="355" width="270" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="s11" value="11. REVIEW, COMPARE &amp; FINAL HIRING DECISION&#xa;&#xa;Interviewer reviews rankings, transcript and assessment, compares candidates and makes the final human decision." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF4FF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1445" y="355" width="270" height="165" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s1" target="s2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s2" target="s3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s3" target="s4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s4" target="s5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s5" target="s6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s6" target="s7"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1495" y="325"/><mxPoint x="300" y="325"/></Array></mxGeometry></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s7" target="s8"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s8" target="s9"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s9" target="s10"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="s10" target="s11"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Architecture section -->
+        <mxCell id="archTitle" value="HIGH-LEVEL SYSTEM ARCHITECTURE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17365D;strokeColor=#17365D;fontColor=#FFFFFF;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="580" width="1685" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="users" value="USERS&#xa;&#xa;INTERVIEWER&#xa;• Create/manage jobs&#xa;• View applications &amp; rankings&#xa;• Conduct interviews&#xa;• Review assessments&#xa;• Make final decision&#xa;&#xa;CANDIDATE&#xa;• Find/apply for jobs&#xa;• Submit CV&#xa;• Join interview&#xa;• View own application status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAFC;strokeColor=#9AA7B2;strokeWidth=2;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="650" width="270" height="270" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="frontend" value="WEB FRONTEND&#xa;&#xa;Interviewer Portal&#xa;Candidate Portal&#xa;Job Management&#xa;Applications&#xa;Interview Room&#xa;Transcript &amp; Assessment Views" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF4FF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="650" width="260" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="backend" value="BACKEND — FASTAPI / PYTHON&#xa;&#xa;REST APIs&#xa;Authentication &amp; Role Access&#xa;Business Logic&#xa;Interview Management&#xa;Background Tasks&#xa;Integration with AI + MCP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF9EE;strokeColor=#5CB85C;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="650" width="260" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ai" value="AI INTELLIGENCE — LOCAL / OPEN SOURCE&#xa;&#xa;LangGraph Orchestration&#xa;Local LLM&#xa;CV Parsing &amp; Semantic Matching&#xa;Candidate Scoring&#xa;Interview Q&amp;A Analysis&#xa;Assessment Generation&#xa;Local Speech-to-Text" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EEFF;strokeColor=#7656D6;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="910" y="650" width="300" height="220" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mcp" value="MCP INTEGRATION LAYER&#xa;&#xa;MCP Client / Recruitment Agent&#xa;&#xa;Job Posting Tools&#xa;Calendar &amp; Scheduling Tools&#xa;Email / Notification Tools&#xa;File / Document Tools&#xa;Other External Tools&#xa;&#xa;Extensible through MCP servers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0FF;strokeColor=#A35BBF;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="650" width="280" height="240" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="external" value="EXTERNAL CHANNELS / TOOLS&#xa;&#xa;Free / approved job boards&#xa;Social media / job channels&#xa;Email service&#xa;Calendar / scheduling&#xa;File storage&#xa;Other supported MCP tools&#xa;&#xa;Note: platform access and automation must comply with each service’s terms." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#F0AD4E;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="650" width="165" height="240" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="db" value="DATA LAYER — POSTGRESQL&#xa;&#xa;Jobs&#xa;Candidates&#xa;CVs&#xa;Applications&#xa;Interviews&#xa;Transcripts&#xa;Scores&#xa;Assessments&#xa;Users" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3FAF6;strokeColor=#36A269;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="890" width="260" height="190" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="free" value="FREE-COST CONSTRAINT&#xa;&#xa;Local / open-source AI models&#xa;Free or self-hosted infrastructure&#xa;No paid API dependency&#xa;Dockerized deployment&#xa;Secrets kept out of source control" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF7FF;strokeColor=#2B7BBB;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="910" y="900" width="300" height="170" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="privacy" value="PRIVACY &amp; HUMAN OVERSIGHT&#xa;&#xa;Interview recording requires consent.&#xa;Candidate data is protected and deletable.&#xa;AI provides evidence and assessment support.&#xa;FINAL HIRING DECISION REMAINS WITH THE INTERVIEWER." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F7F7;strokeColor=#66717A;strokeWidth=2;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingTop=12;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="920" width="475" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Architecture connectors -->
+        <mxCell id="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="users" target="frontend"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="frontend" target="backend"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="backend" target="ai"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="ai" target="mcp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" edge="1" parent="1" source="mcp" target="external"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;dashed=1;" edge="1" parent="1" source="backend" target="db"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;dashed=1;" edge="1" parent="1" source="ai" target="db"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="KEY PRINCIPLE: AI assists recruitment, scheduling, screening and assessment — the interview itself is conducted by a real interviewer, and the final hiring decision remains human." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17365D;strokeColor=#17365D;fontColor=#FFFFFF;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1095" width="1685" height="55" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,15 @@
+{
+  "reason": "Synthetic limited-evidence example for interview analysis demonstration.",
+  "segments": [
+    {"speaker_role": "interviewer", "started_at_seconds": 0, "ended_at_seconds": 12, "text": "How would you design an API endpoint for job applications?"},
+    {"speaker_role": "candidate", "started_at_seconds": 13, "ended_at_seconds": 30, "text": "I would make a route and save the data. I have not built an application API before."},
+    {"speaker_role": "interviewer", "started_at_seconds": 37, "ended_at_seconds": 49, "text": "What should happen if the client retries after a timeout?"},
+    {"speaker_role": "candidate", "started_at_seconds": 50, "ended_at_seconds": 66, "text": "I would probably send the request again. I do not know how to prevent duplicate records."},
+    {"speaker_role": "interviewer", "started_at_seconds": 73, "ended_at_seconds": 87, "text": "How would you investigate a slow database query?"},
+    {"speaker_role": "candidate", "started_at_seconds": 88, "ended_at_seconds": 104, "text": "I would restart the service and see if that fixes it. I have not used a query plan."},
+    {"speaker_role": "interviewer", "started_at_seconds": 111, "ended_at_seconds": 123, "text": "How would you test the workflow?"},
+    {"speaker_role": "candidate", "started_at_seconds": 124, "ended_at_seconds": 140, "text": "I would click through the page manually. I have not written automated tests for APIs."},
+    {"speaker_role": "interviewer", "started_at_seconds": 147, "ended_at_seconds": 160, "text": "What security risks would you consider?"},
+    {"speaker_role": "candidate", "started_at_seconds": 161, "ended_at_seconds": 178, "text": "I would use a password. I do not know how uploaded files or access permissions should be handled."}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "reason": "Synthetic mixed-evidence example for interview analysis demonstration.",
+  "segments": [
+    {"speaker_role": "interviewer", "started_at_seconds": 0, "ended_at_seconds": 13, "text": "How would you design an API endpoint that accepts job applications?"},
+    {"speaker_role": "candidate", "started_at_seconds": 14, "ended_at_seconds": 53, "text": "I would make a POST endpoint, validate the fields, and save the application in the database. I have used FastAPI and Pydantic for request validation in a class project."},
+    {"speaker_role": "interviewer", "started_at_seconds": 60, "ended_at_seconds": 73, "text": "What if the client retries after a timeout?"},
+    {"speaker_role": "candidate", "started_at_seconds": 74, "ended_at_seconds": 109, "text": "I would check whether the application already exists before inserting another one. I have not implemented a formal idempotency key, but I understand it could make retries more reliable."},
+    {"speaker_role": "interviewer", "started_at_seconds": 116, "ended_at_seconds": 132, "text": "How would you investigate a slow database-backed endpoint?"},
+    {"speaker_role": "candidate", "started_at_seconds": 133, "ended_at_seconds": 171, "text": "I would look at the logs and try to find which query is slow. I know indexes can help, although I would need to inspect the query before deciding which index to add."},
+    {"speaker_role": "interviewer", "started_at_seconds": 178, "ended_at_seconds": 190, "text": "How do you test this workflow?"},
+    {"speaker_role": "candidate", "started_at_seconds": 191, "ended_at_seconds": 230, "text": "I would test valid and invalid requests and check that the database contains the expected application. I have written a few endpoint tests but have not tested background jobs or file uploads in that project."},
+    {"speaker_role": "interviewer", "started_at_seconds": 237, "ended_at_seconds": 252, "text": "What security risks would you review?"},
+    {"speaker_role": "candidate", "started_at_seconds": 253, "ended_at_seconds": 291, "text": "I would make sure users are logged in and validate uploaded files. I am not sure yet how I would prevent one applicant from accessing another person's application, so I would want to review the authorization checks carefully."}
+  ]
+}

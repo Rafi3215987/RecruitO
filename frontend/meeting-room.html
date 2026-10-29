@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b3a">
+  <meta name="referrer" content="no-referrer">
+  <title>Interview room — RecruitO</title>
+  <link rel="stylesheet" href="./styles.css?v=20261028-2">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main class="public-jobs-page interview-room-page">
+    <header class="public-jobs-header"><a class="public-jobs-brand" href="./index.html"><img src="./assets/recruito-logo.png" alt=""><span>RecruitO</span></a><a class="public-jobs-team-link" href="./index.html">Workspace</a></header>
+    <section class="interview-room-head" aria-labelledby="interview-room-title">
+      <p class="eyebrow">LIVE INTERVIEW</p>
+      <h1 id="interview-room-title">Interview room</h1>
+      <p id="interview-room-info" class="interview-room-info">Connecting to the secure room…</p>
+      <p id="interview-room-status" class="interview-room-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <div class="interview-layout">
+      <div class="interview-main">
+        <div class="interview-video-grid">
+          <figure><video id="local-video" autoplay playsinline muted></video><figcaption>You</figcaption></figure>
+          <figure><video id="remote-video" autoplay playsinline></video><figcaption>Other participant</figcaption></figure>
+        </div>
+        <div class="interview-room-controls">
+          <button id="toggle-mic" class="icon-control" type="button" title="Mute microphone" aria-label="Mute microphone" disabled>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+          </button>
+          <button id="toggle-camera" class="icon-control" type="button" title="Turn camera off" aria-label="Turn camera off" disabled>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l5-3v10l-5-3z"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg>
+          </button>
+          <button id="end-room" class="icon-control icon-control-end" type="button" title="End interview" aria-label="End interview" disabled>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85-.18.18-.43.28-.7.28-.28 0-.53-.11-.71-.29L.29 13.08a.956.956 0 0 1-.29-.7c0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71 0 .28-.11.53-.29.71l-1.81 1.81c-.18.18-.43.29-.71.29-.27 0-.52-.1-.7-.28a11.27 11.27 0 0 0-2.67-1.85.996.996 0 0 1-.56-.9v-3.1C15.15 9.25 13.6 9 12 9z"/></svg>
+          </button>
+        </div>
+        <section id="identity-panel" class="candidate-access" aria-labelledby="identity-panel-title">
+          <h2 id="identity-panel-title">Candidate identity check</h2>
+          <p id="identity-status" role="status" aria-live="polite">No biometric match available.</p>
+          <div id="identity-profile" hidden></div>
+        </section>
+      </div>
+
+      <div class="interview-side">
+        <section id="candidate-info-panel" class="candidate-info-panel" aria-labelledby="candidate-info-title" hidden>
+          <h2 id="candidate-info-title">Candidate info</h2>
+          <p id="candidate-info-role" class="candidate-info-role"></p>
+          <dl id="candidate-info-contact" class="candidate-info-contact"></dl>
+          <h3 class="candidate-info-subhead">Key highlights from CV</h3>
+          <ul id="candidate-info-highlights" class="candidate-info-highlights"></ul>
+        </section>
+
+        <aside class="interview-transcript-panel" aria-labelledby="interview-transcript-title">
+          <h2 id="interview-transcript-title">Live transcript</h2>
+          <p class="interview-transcript-hint">Each line shows who spoke.</p>
+          <ol id="interview-transcript" aria-live="polite"></ol>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/livekit-client.umd.min.js?v=2.23.0"></script>
+  <script type="module" src="./js/meeting-room.js?v=20261028-2"></script>
+</body>
+</html>

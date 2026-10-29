@@ -1,0 +1,11 @@
+# Privacy and Fairness Notes
+
+RecruitO is a decision-support prototype. It stores application details, CV files, scores, interview schedules, consent records, and transcript segments. Use synthetic candidate data for development and demonstrations. Do not process real candidate data until the trainer or project owner approves access, retention, deletion, and third-party processing practices.
+
+CV text and interview content are sent to Google Gemini when scoring, chat, transcription, or assessment features are explicitly run. Short audio chunks are sent only after each interview participant checks the transcription consent box. RecruitO stores attributed transcript text, not the original audio chunks. Transcription is chunk based and can have delays or imperfect timestamps.
+
+Biometric matching is optional. A candidate must first opt in on the candidate profile page and then separately consent to a one-time frame during the interview. The image is processed in memory; the stored SFace embedding is set to expire after 30 days and can be deleted earlier through consent revocation. The Compose worker purges expired embeddings. This is an educational prototype, not a reliable or production-grade identity check. A match must be confirmed with the candidate, a non-match must use manual verification, and neither outcome may affect an automated hiring decision. Trainer approval and model-provenance review are required before any real-candidate use.
+
+CV scoring depends on the requirements a hiring manager enters, CV extraction quality, and Gemini's evidence interpretation. It may reflect bias in those inputs or model output. Every score is intended for human review; hiring managers cannot edit model scores directly, but can correct candidate data with a reason and request a new versioned score. F8 flags are follow-up prompts, not allegations. The project needs representative synthetic test cases and human review before drawing fairness conclusions.
+
+Mailpit captures local Compose email. Real SMTP is used only when credentials are configured. Calendar tier 1 links open Google Calendar but do not create an event through OAuth. Blogger receives a job post only through the configured Mail2Blogger email flow. Review all provider disclosures and delete demonstration records before sharing a public deployment.

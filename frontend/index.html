@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17242b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>RecruitO — Thoughtful hiring, made clearer</title>
+  <link rel="stylesheet" href="./styles.css?v=20261026-6">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main id="home-screen" class="home-screen">
+    <header class="home-header">
+      <a class="home-header-brand" href="./index.html" aria-label="RecruitO home">
+        <img class="brand-mark" src="./assets/recruito-logo.png" alt="">
+        <span>RecruitO</span>
+      </a>
+      <nav class="home-account-nav" aria-label="Account">
+        <a class="home-sign-in" href="./index.html?auth=signin">Sign in</a>
+        <a class="home-sign-up" href="./index.html?auth=signup">Sign up</a>
+      </nav>
+    </header>
+
+    <section class="home-hero" aria-labelledby="home-heading">
+      <div class="home-feature home-feature-shortlist">
+        <span class="home-feature-icon" aria-hidden="true">✳</span>
+        <span><strong>Evidence-backed shortlists</strong><small>See how candidates match the role</small></span>
+      </div>
+      <div class="home-feature home-feature-interviews">
+        <span class="home-feature-icon" aria-hidden="true">◷</span>
+        <span><strong>Structured interviews</strong><small>Keep every conversation focused</small></span>
+      </div>
+      <div class="home-feature home-feature-decisions">
+        <span class="home-feature-icon" aria-hidden="true">◎</span>
+        <span><strong>Human-led decisions</strong><small>Make room for better hiring choices</small></span>
+      </div>
+
+      <div class="home-brand">
+        <img class="home-logo" src="./assets/recruito-logo.png" alt="">
+        <h1 id="home-heading">RecruitO</h1>
+        <p>Thoughtful hiring, made clearer.</p>
+      </div>
+      <p class="home-footer">Decision support for hiring teams, with people at the center.</p>
+    </section>
+  </main>
+
+  <main id="auth-screen" class="auth-screen" hidden>
+    <section class="auth-card" aria-labelledby="auth-heading">
+      <a class="brand auth-brand" href="./" aria-label="RecruitO home">
+        <img class="brand-mark" src="./assets/recruito-logo.png" alt="">
+        <span class="brand-copy"><strong>RecruitO</strong><span>Recruitment platform</span></span>
+      </a>
+      <p class="eyebrow">WELCOME TO RECRUITO</p>
+      <h1 id="auth-heading">Welcome back.</h1>
+      <p id="auth-copy" class="auth-copy">Sign in to continue. Candidates can create an account here; hiring-manager accounts are provided by the RecruitO team.</p>
+      <div id="auth-feedback" class="feedback" role="alert" aria-live="assertive" hidden></div>
+      <form id="login-form">
+        <div id="register-name-field" class="form-field" hidden>
+          <label for="login-full-name">Full name</label>
+          <input id="login-full-name" name="full_name" type="text" maxlength="255" autocomplete="name" disabled>
+        </div>
+        <div id="register-phone-field" class="form-field" hidden>
+          <label for="login-phone-number">Phone number</label>
+          <input id="login-phone-number" name="phone_number" type="tel" maxlength="30" autocomplete="tel" disabled>
+        </div>
+        <div class="form-field">
+          <label for="login-email">Email address</label>
+          <input id="login-email" name="email" type="email" maxlength="255" autocomplete="username" required>
+        </div>
+        <div class="form-field">
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" maxlength="128" autocomplete="current-password" required>
+        </div>
+        <button id="login-button" class="button button-primary auth-submit" type="submit">Sign in</button>
+      </form>
+      <a id="auth-mode-toggle" class="text-button" href="./index.html?auth=signup">New candidate? Create an account</a>
+      <a id="forgot-password-link" class="text-button" href="./forgot-password.html">Forgot password?</a>
+      <p id="manager-account-note" class="auth-copy">Hiring manager? Sign in with your provided work account.</p>
+      <p class="auth-security"><span aria-hidden="true">⌑</span> Session authentication is managed by a secure, HttpOnly API cookie.</p>
+    </section>
+  </main>
+
+  <div class="app-shell" hidden>
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="RecruitO home">
+        <img class="brand-mark" src="./assets/recruito-logo.png" alt="">
+        <span class="brand-copy"><strong>RecruitO</strong><span>Hiring workspace</span></span>
+      </a>
+
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="primary-nav">
+        <a class="nav-item is-active" href="#workspace" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">▦</span> Overview
+        </a>
+        <a class="nav-item" href="#job-builder">
+          <span class="nav-icon" aria-hidden="true">＋</span> Create a job
+        </a>
+        <a class="nav-item" href="./manager-applications.html">
+          <span class="nav-icon" aria-hidden="true">▣</span> Applications &amp; interviews
+        </a>
+        <a class="nav-item" href="./create-interviewer.html">
+          <span class="nav-icon" aria-hidden="true">＋</span> Create interviewer account
+        </a>
+        <a class="nav-item" href="./manager-profile.html">
+          <span class="nav-icon" aria-hidden="true">◐</span> Edit profile
+        </a>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+      <div class="workspace-label">YOUR WORK</div>
+      <form class="open-job-form" id="open-job-form">
+        <label for="job-id">Open a job by ID</label>
+        <div class="inline-field">
+          <input id="job-id" name="job_id" type="number" min="1" step="1" inputmode="numeric" placeholder="e.g. 12" required>
+          <button class="icon-button" type="submit" aria-label="Open job">→</button>
+        </div>
+      </form>
+      <div class="saved-jobs">
+        <div class="saved-jobs-heading">SAVED JOBS <button id="refresh-jobs" class="refresh-jobs" type="button" aria-label="Refresh saved jobs">↻</button></div>
+        <div id="jobs-list" class="jobs-list" aria-live="polite"></div>
+      </div>
+
+      <div class="sidebar-foot">
+        <span class="privacy-dot" aria-hidden="true"></span>
+        <span>Internal workspace<br><small>Do not enter real candidate data</small></span>
+      </div>
+    </aside>
+
+    <main id="workspace" class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb">Workspace <span aria-hidden="true">/</span> Jobs</div>
+        <div class="topbar-right">
+          <span id="api-status" class="api-status" role="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-label">Checking API</span>
+          </span>
+          <span id="user-avatar" class="avatar" aria-label="Hiring manager account">HM</span>
+          <button id="logout-button" class="button button-secondary" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <section class="page-intro">
+        <div>
+          <p class="eyebrow">RECRUITMENT WORKSPACE</p>
+          <h1>Build a thoughtful shortlist.</h1>
+          <p class="intro-copy">Describe the role. RecruitO drafts the description, checks its content, and publishes it automatically when it passes.</p>
+        </div>
+        <a class="button button-primary intro-action" href="#job-builder"><span aria-hidden="true">＋</span> Create job profile</a>
+      </section>
+
+      <section class="workflow" aria-label="Job setup progress">
+        <div class="workflow-step is-current"><span class="step-number">01</span><span><strong>Describe role</strong><small>Share your brief</small></span></div>
+        <span class="workflow-line" aria-hidden="true"></span>
+        <div class="workflow-step"><span class="step-number">02</span><span><strong>Automated checks</strong><small>Description &amp; criteria</small></span></div>
+        <span class="workflow-line" aria-hidden="true"></span>
+        <div class="workflow-step"><span class="step-number">03</span><span><strong>Published</strong><small>Open to candidates</small></span></div>
+      </section>
+
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+
+      <section id="job-builder" class="workspace-grid" aria-label="Job profile builder">
+        <div class="panel setup-panel">
+          <div class="panel-heading">
+            <div class="heading-icon" aria-hidden="true">✳</div>
+            <div><h2>Job-description assistant</h2><p>Describe the role and the requirements that matter to you.</p></div>
+          </div>
+
+          <div id="manager-job-chat-messages" class="manager-job-chat-messages" role="log" aria-live="polite">
+            <p class="manager-job-chat-message manager-job-chat-assistant">Tell me about the role you want to hire for. Include any responsibilities, must-have skills, experience, location, employment type, pay range, or benefits you already know. I’ll ask about anything essential that is missing.</p>
+          </div>
+          <form id="manager-job-chat-form" class="manager-job-chat-form">
+            <label class="sr-only" for="manager-job-chat-input">Describe the job</label>
+            <textarea id="manager-job-chat-input" rows="4" maxlength="2000" placeholder="For example: We need a mid-level backend engineer for a full-time hybrid role in Dhaka…" required></textarea>
+            <div class="manager-job-chat-actions">
+              <button class="button button-secondary" id="manager-job-chat-send" type="submit">Send message</button>
+              <button class="button button-primary" id="manager-job-chat-generate" type="button" disabled>Generate and publish</button>
+              <button class="text-button" id="manager-job-chat-new" type="button" hidden>Start a new brief</button>
+            </div>
+          </form>
+          <p class="secure-note"><span aria-hidden="true">⌑</span> Your role brief is sent to the RecruitO API and Gemini. Do not include candidate personal information. RecruitO publishes descriptions only after automated policy checks pass.</p>
+        </div>
+
+        <section class="panel draft-panel" aria-labelledby="draft-heading">
+          <div class="panel-heading draft-heading">
+            <div class="heading-icon heading-icon-lilac" aria-hidden="true">▤</div>
+            <div class="draft-title-wrap"><h2 id="draft-heading" tabindex="-1">Job description</h2><p id="draft-subtitle">Your generated draft will appear here.</p></div>
+            <span id="job-status" class="status-badge" hidden></span>
+          </div>
+          <div id="draft-empty" class="draft-empty">
+            <span class="empty-illustration" aria-hidden="true"><span>✧</span></span>
+            <h3>A considered role starts here</h3>
+            <p>Describe your hiring needs in the chat to create an inclusive, structured draft grounded in your brief.</p>
+            <div class="empty-checks">
+              <span><b aria-hidden="true">✓</b> Clear responsibilities</span>
+              <span><b aria-hidden="true">✓</b> Inclusive language</span>
+              <span><b aria-hidden="true">✓</b> Reviewable requirements</span>
+            </div>
+          </div>
+          <div id="draft-content" class="draft-content" hidden>
+            <div class="draft-meta"><span id="job-id-label"></span><span id="draft-updated"></span></div>
+            <label class="sr-only" for="jd-text">Job description draft</label>
+            <textarea id="jd-text" class="jd-editor" rows="15" maxlength="20000" aria-describedby="jd-hint"></textarea>
+            <p id="jd-hint" class="field-hint">Descriptions that pass automated policy checks are published to candidates on RecruitO.</p>
+
+            <section class="indeed-posting-panel" aria-labelledby="external-posting-heading">
+              <div>
+                <h3 id="external-posting-heading">Publish this job externally</h3>
+                <p>RecruitO attempts Blogger publishing automatically after the policy checks pass. This needs a public HTTPS RecruitO address and working Blogger mail settings. Blogger email publishing creates a new post each time, and Mail2Blogger links to the blog homepage.</p>
+              </div>
+              <button id="publish-blogger" class="button button-secondary" type="button" hidden>Post to Blogger</button>
+              <p id="blogger-post-message" class="field-hint" role="status" aria-live="polite"></p>
+              <div class="form-field">
+                <label for="external-post-url">External job post URL</label>
+                <input id="external-post-url" type="url" maxlength="2048" placeholder="https://…" autocomplete="url">
+              </div>
+              <button id="copy-application-link" class="text-button" type="button">Copy RecruitO application link</button>
+              <p id="application-link-message" class="field-hint" role="status" aria-live="polite"></p>
+            </section>
+
+            <section id="free-share-panel" class="indeed-posting-panel free-share-panel" aria-labelledby="free-share-heading" hidden>
+              <div>
+                <h3 id="free-share-heading">Share this public job link for free</h3>
+                <p>The job is already published on RecruitO. You can share its application page using a free social-site composer. No posting API is used; review and confirm the post on the site you choose. A social account and platform rules may apply. RecruitO must be deployed at a public HTTPS address for others to open the link.</p>
+              </div>
+              <div class="free-share-actions">
+                <a id="share-linkedin" class="button button-secondary" target="_blank" rel="noopener noreferrer">Share on LinkedIn</a>
+                <a id="share-facebook" class="button button-secondary" target="_blank" rel="noopener noreferrer">Share on Facebook</a>
+                <a id="share-x" class="button button-secondary" target="_blank" rel="noopener noreferrer">Share on X</a>
+                <button id="copy-social-post" class="button button-secondary" type="button">Copy job post text</button>
+              </div>
+              <p id="social-share-message" class="field-hint" role="status" aria-live="polite"></p>
+            </section>
+
+            <div class="requirements-heading">
+              <div><h3>Selection requirements</h3><p>Review what candidates will be evaluated against.</p></div>
+              <button id="add-requirement" class="text-button" type="button">＋ Add requirement</button>
+            </div>
+            <div id="requirements-list" class="requirements-list"></div>
+
+            <div class="draft-actions">
+              <button id="save-button" class="button button-secondary" type="button">Save changes</button>
+              <button id="approve-button" class="button button-primary" type="button">Publish to candidates <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+          <div class="draft-footer"><span class="footer-lock" aria-hidden="true">⌑</span> RecruitO automatically publishes a generated job profile after it passes the configured content checks.</div>
+        </section>
+      </section>
+
+      <footer class="page-footer"><span>RecruitO</span><span>Decision support, with human oversight.</span><span>Prototype workspace · Not for real candidate data</span></footer>
+    </main>
+  </div>
+  <script type="module" src="./js/app.js?v=20261026-5"></script>
+  <script type="module" src="./js/manager-job-chat.js"></script>
+</body>
+</html>

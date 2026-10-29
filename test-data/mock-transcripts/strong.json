@@ -1,0 +1,15 @@
+{
+  "reason": "Synthetic strong example for interview analysis demonstration.",
+  "segments": [
+    {"speaker_role": "interviewer", "started_at_seconds": 0, "ended_at_seconds": 14, "text": "How would you design an API endpoint that accepts job applications safely and reliably?"},
+    {"speaker_role": "candidate", "started_at_seconds": 15, "ended_at_seconds": 71, "text": "I would validate the request with a typed schema, enforce file type and size limits, authenticate the applicant, and store the file outside the public web root. The database transaction would create the application record and a background job for document parsing. I would return an application identifier and avoid returning internal scoring fields."},
+    {"speaker_role": "interviewer", "started_at_seconds": 76, "ended_at_seconds": 91, "text": "What would you do if the client retries after a timeout?"},
+    {"speaker_role": "candidate", "started_at_seconds": 92, "ended_at_seconds": 139, "text": "I would accept an idempotency key, persist it with the result, and return the original application response for a repeated key. That prevents duplicate applications if the first request succeeded but the response was lost."},
+    {"speaker_role": "interviewer", "started_at_seconds": 146, "ended_at_seconds": 164, "text": "How would you investigate a slow database-backed endpoint?"},
+    {"speaker_role": "candidate", "started_at_seconds": 165, "ended_at_seconds": 216, "text": "I would compare request traces and query timings, inspect the query plan, and check whether the endpoint loads related rows one at a time. I would add an index only after confirming the filter and ordering pattern, then measure the change with representative data."},
+    {"speaker_role": "interviewer", "started_at_seconds": 224, "ended_at_seconds": 241, "text": "How do you test this workflow?"},
+    {"speaker_role": "candidate", "started_at_seconds": 242, "ended_at_seconds": 291, "text": "I would cover schema validation and authorization with unit tests, then exercise upload, persistence, retry behavior, and background processing through API integration tests. I would include oversized and mislabeled files, duplicate idempotency keys, and a parser failure to verify graceful handling."},
+    {"speaker_role": "interviewer", "started_at_seconds": 299, "ended_at_seconds": 312, "text": "What security risks would you review before launch?"},
+    {"speaker_role": "candidate", "started_at_seconds": 313, "ended_at_seconds": 366, "text": "I would verify object-level authorization, protect against path traversal, keep secrets out of logs, and ensure uploaded documents cannot execute. I would also limit retention, audit administrative access, and make sure one applicant cannot retrieve another applicant's record by changing an identifier."}
+  ]
+}

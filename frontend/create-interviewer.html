@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b3a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Create interviewer account — RecruitO</title>
+  <link rel="stylesheet" href="./styles.css?v=20261026-6">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main class="public-jobs-page manager-applications-page">
+    <header class="public-jobs-header">
+      <a class="public-jobs-brand" href="./index.html" aria-label="RecruitO hiring workspace">
+        <img src="./assets/recruito-logo.png" alt="">
+        <span>RecruitO</span>
+      </a>
+      <div class="manager-page-actions">
+        <a class="public-jobs-team-link" href="./index.html?auth=signin">Back to workspace</a>
+        <button id="manager-logout-button" class="button button-secondary" type="button" hidden>Sign out</button>
+      </div>
+    </header>
+    <p id="manager-logout-message" class="public-jobs-message manager-logout-message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="interviewer-heading">
+      <p class="eyebrow">HIRING TEAM</p>
+      <h1 id="interviewer-heading">Create interviewer account</h1>
+      <p class="public-jobs-intro">Create an interviewer sign-in so they can be assigned to interviews. Share the temporary password securely; they can change it after signing in.</p>
+
+      <p id="manager-gate-message" class="public-jobs-message" role="status" aria-live="polite">Checking your session…</p>
+
+      <section id="interviewer-panel" class="candidate-access" aria-labelledby="interviewer-form-heading" hidden>
+        <div><h2 id="interviewer-form-heading">New interviewer</h2></div>
+        <form id="create-interviewer-form" class="candidate-auth-form">
+          <div class="form-field"><label for="ci-full-name">Full name</label><input id="ci-full-name" name="full_name" maxlength="255" required></div>
+          <div class="form-field"><label for="ci-email">Email</label><input id="ci-email" name="email" type="email" maxlength="255" required></div>
+          <div class="form-field"><label for="ci-password">Temporary password (12+ characters)</label><input id="ci-password" name="password" type="password" minlength="12" maxlength="128" autocomplete="new-password" required></div>
+          <div class="form-field"><label for="ci-reason">Reason for creating this account</label><textarea id="ci-reason" name="reason" minlength="10" maxlength="1000" required></textarea></div>
+          <button class="button button-primary" type="submit">Create interviewer</button>
+        </form>
+        <p id="create-interviewer-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+
+    <footer class="public-jobs-footer">RecruitO · Decision support, with human oversight.</footer>
+  </main>
+  <script type="module" src="./js/create-interviewer.js?v=20261026-2"></script>
+</body>
+</html>

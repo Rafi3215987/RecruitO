@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b3a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Open roles — RecruitO</title>
+  <link rel="stylesheet" href="./styles.css?v=20261026-6">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main class="public-jobs-page">
+    <header class="public-jobs-header">
+      <a class="public-jobs-brand" href="./index.html" aria-label="RecruitO home">
+        <img src="./assets/recruito-logo.png" alt="">
+        <span>RecruitO</span>
+      </a>
+      <a class="public-jobs-team-link" href="./index.html">Home / switch account</a>
+    </header>
+
+    <section aria-labelledby="public-jobs-heading">
+      <p class="eyebrow">CAREERS</p>
+      <h1 id="public-jobs-heading">Explore open roles</h1>
+      <p class="public-jobs-intro">Explore current opportunities, review the role, and apply through RecruitO.</p>
+      <section class="candidate-access" aria-labelledby="candidate-access-heading">
+        <div>
+          <h2 id="candidate-access-heading">Candidate access</h2>
+          <p id="candidate-access-copy">Create an account or sign in to apply for an open role.</p>
+        </div>
+        <form id="candidate-auth-form" class="candidate-auth-form">
+          <div id="candidate-name-field" class="form-field">
+            <label for="candidate-name">Full name</label>
+            <input id="candidate-name" name="full_name" type="text" maxlength="255" autocomplete="name" required>
+          </div>
+          <div id="candidate-phone-field" class="form-field">
+            <label for="candidate-phone">Phone number</label>
+            <input id="candidate-phone" name="phone_number" type="tel" maxlength="30" autocomplete="tel" required>
+          </div>
+          <div class="form-field">
+            <label for="candidate-email">Email</label>
+            <input id="candidate-email" name="email" type="email" maxlength="255" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="candidate-password">Password</label>
+            <input id="candidate-password" name="password" type="password" minlength="8" maxlength="128" autocomplete="new-password" required>
+          </div>
+          <button id="candidate-auth-submit" class="button button-primary" type="submit">Create candidate account</button>
+          <button id="candidate-auth-toggle" class="text-button" type="button">Already registered? Sign in</button>
+        </form>
+        <a class="public-jobs-team-link" href="./forgot-password.html">Forgot password?</a>
+        <p id="candidate-auth-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+        <button id="candidate-logout-button" class="button button-secondary candidate-logout-button" type="button" hidden>Sign out</button>
+      </section>
+      <nav id="candidate-navigation" class="candidate-navigation" aria-label="Candidate pages" hidden>
+        <button class="button button-secondary is-active" type="button" data-candidate-view="profile">My profile</button>
+        <button class="button button-secondary" type="button" data-candidate-view="jobs">Jobs</button>
+        <button class="button button-secondary" type="button" data-candidate-view="dashboard">Dashboard</button>
+      </nav>
+      <section id="candidate-profile" class="candidate-dashboard candidate-profile" aria-labelledby="candidate-profile-heading" hidden>
+        <h2 id="candidate-profile-heading">Your personal information</h2>
+        <p id="candidate-profile-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+        <dl id="candidate-profile-details" class="candidate-profile-details"></dl>
+        <div class="candidate-application-actions">
+          <button id="candidate-profile-edit" class="button button-secondary" type="button">Edit profile</button>
+        </div>
+        <form id="candidate-profile-form" class="application-form" novalidate hidden>
+          <p class="public-jobs-message">Update your education details below. Your contact email is tied to your sign-in and cannot be changed here.</p>
+          <div id="candidate-profile-fields"></div>
+          <p id="candidate-profile-form-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+          <div class="candidate-application-actions">
+            <button type="submit" class="button button-primary">Save changes</button>
+            <button id="candidate-profile-cancel" class="button button-secondary" type="button">Cancel</button>
+          </div>
+        </form>
+        <section class="candidate-access" aria-labelledby="biometric-heading">
+          <h3 id="biometric-heading">Optional interview identity check</h3>
+          <p>With your separate consent, RecruitO creates and stores a face representation for up to 30 days. The captured photo is processed in memory and not stored. This is optional and does not affect your application.</p>
+          <p id="biometric-status" role="status" aria-live="polite">Checking enrollment…</p>
+          <label class="transcript-consent"><input id="biometric-consent" type="checkbox"> I consent to creating and storing a face representation for interview identity matching.</label>
+          <video id="biometric-preview" class="interview-video" autoplay muted playsinline hidden></video>
+          <div class="candidate-application-actions">
+            <button id="biometric-start-camera" class="button button-secondary" type="button">Start camera</button>
+            <button id="biometric-capture" class="button button-primary" type="button" disabled>Capture and enroll</button>
+            <button id="biometric-revoke" class="button button-secondary" type="button" hidden>Revoke consent and delete representation</button>
+          </div>
+        </section>
+      </section>
+      <section id="candidate-jobs-view" hidden>
+        <p id="public-jobs-message" class="public-jobs-message" role="status" aria-live="polite">Loading open roles…</p>
+        <div id="public-jobs-list" class="public-jobs-list"></div>
+      </section>
+      <section id="candidate-dashboard" class="candidate-dashboard" aria-labelledby="candidate-dashboard-heading" hidden>
+        <h2 id="candidate-dashboard-heading">Your dashboard</h2>
+        <h3>Applications and interview updates</h3>
+        <p id="candidate-dashboard-message" class="public-jobs-message" role="status" aria-live="polite"></p>
+        <div id="candidate-applications-list" class="public-jobs-list"></div>
+        <section id="candidate-chat" class="candidate-chat" aria-labelledby="candidate-chat-heading" hidden>
+          <h3 id="candidate-chat-heading">Ask RecruitO</h3>
+          <p class="public-jobs-message">Ask about your applications, interview schedule, or public job openings.</p>
+          <div id="candidate-chat-messages" class="candidate-chat-messages" role="log" aria-live="polite"></div>
+          <form id="candidate-chat-form" class="candidate-chat-form">
+            <label class="sr-only" for="candidate-chat-input">Your question</label>
+            <textarea id="candidate-chat-input" name="message" rows="2" maxlength="1000" placeholder="Ask a question about your applications…" required></textarea>
+            <button id="candidate-chat-submit" class="button button-primary" type="submit">Send</button>
+          </form>
+        </section>
+      </section>
+    </section>
+
+    <footer class="public-jobs-footer">RecruitO · Decision support, with human oversight.</footer>
+  </main>
+  <script type="module" src="./js/public-jobs.js?v=20261026-3"></script>
+</body>
+</html>

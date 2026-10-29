@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b3a">
+  <meta name="referrer" content="no-referrer">
+  <title>Join interview — RecruitO</title>
+  <link rel="stylesheet" href="./styles.css?v=20261027-5">
+  <script src="./js/config.js?v=20261015-2" defer></script>
+</head>
+<body>
+  <main class="public-jobs-page interview-lobby-page">
+    <header class="public-jobs-header"><a class="public-jobs-brand" href="./index.html"><img src="./assets/recruito-logo.png" alt=""><span>RecruitO</span></a><a class="public-jobs-team-link" href="./index.html">Workspace</a></header>
+    <section class="interview-lobby-card" aria-labelledby="interview-room-title">
+      <p class="eyebrow">SECURE INTERVIEW ROOM</p>
+      <h1 id="interview-room-title">Interview session</h1>
+      <p id="interview-room-info" class="interview-room-info">Checking your interview link…</p>
+      <p id="interview-room-status" class="interview-room-status" role="status" aria-live="polite"></p>
+
+      <div class="interview-consents">
+        <h2 class="interview-consents-title">Before you join</h2>
+        <label class="transcript-consent"><input id="transcript-consent" type="checkbox"> I consent to sending my microphone audio chunks to AssemblyAI for transcription. RecruitO stores the transcript segments; it does not keep the raw audio. I can leave this unchecked and still join the call.</label>
+        <label id="identity-consent-label" class="transcript-consent" hidden><input id="identity-consent" type="checkbox"> Candidate only: I consent to a one-time face match using the optional representation I enrolled with from my dashboard. This check is optional and is not used to make a hiring decision. The image frame is processed in memory and not stored.</label>
+      </div>
+
+      <button id="join-room" class="button button-primary interview-join-button" type="button" disabled>Join the interview</button>
+      <p class="interview-room-consent">Joining opens the meeting room in a dedicated page. Your browser will then ask for camera and microphone access.</p>
+    </section>
+  </main>
+  <script type="module" src="./js/interview-lobby.js?v=20261027-1"></script>
+</body>
+</html>
